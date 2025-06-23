@@ -41,7 +41,17 @@ This repository contains the code and results for a robotics assignment develope
      source install/setup.bash
      ```
 
-2. **Running the Controller**
+2. **Launching the Robot**
+
+   To visualize the robot in an empty world in Gazebo, execute:
+
+     ```bash
+	export TURTLEBOT3_MODEL=burger
+	ros2 launch turtlebot3_gazebo empty_world.launch.py
+     ```
+
+
+3. **Running the Controller**
 
    * Launch with:
 
@@ -49,7 +59,7 @@ This repository contains the code and results for a robotics assignment develope
      ros2 run robotcontrol controller
      ```
 
-3. **Recording Odometry**
+4. **Recording Odometry**
 
    * Record with rosbag2:
 
@@ -57,7 +67,7 @@ This repository contains the code and results for a robotics assignment develope
      ros2 bag record -o askisi1_bag /cmd_vel /odom
      ```
 
-4. **Data Export and Plotting**
+5. **Data Export and Plotting**
 
    * Convert `.db3` to `.csv` using `export_odom_to_csv.py`
    * Plot data using `plot_rosbag.py`
